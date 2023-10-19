@@ -1,0 +1,64 @@
+@use '../globals/variables';
+
+.header {
+
+    background-color: variables.$header-color;
+    color: variables.$bright-text-color;
+
+    display: flex;
+    flex-direction: column;
+    font-size: variables.$header-font-size !important;
+
+    &__row {
+        display: flex;
+        gap: 24px;
+
+        padding: 10px 20px;
+        align-items: center;
+    }
+
+    &__menu-button {
+        
+        padding: 6px 8px;
+        border-radius: 4px;
+
+        display: flex;
+        cursor: pointer;
+        background-color: rgba(255,255,255,0);
+
+        transition: box-shadow 0.15s,
+        background-color 0.15s;
+    }
+
+    &__menu-button:hover {
+        background-color: rgba(255,255,255,0.1);
+    }
+
+    &__menu-button:active {
+        background-color: rgba(255,255,255,0.25);
+    }
+
+    &__menu-button.pressed {
+        background-color: rgba(255,255,255,0.25);
+        box-shadow: 5px 5px 10px -5px rgba(34, 60, 80, 1) inset;
+    }
+
+    &__menu-button.pressed:hover {
+        background-color: rgba(255,255,255,0.3);
+    }
+
+    &__menu-button.pressed:active {
+        background-color: rgba(255,255,255,0.4);
+    }
+
+    &__menu-icon {
+        transform: scale(1.3);
+    }
+
+    &::after {
+        width: 100%;
+        content: "";
+        height: 2px;
+        background-color: variables.$accent-color;
+    }
+}

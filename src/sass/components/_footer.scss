@@ -1,0 +1,12 @@
+@use '../globals/variables';
+
+.footer {
+    background-color: variables.$header-color;
+    color: variables.$bright-text-color;
+
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem !important;
+    padding: 10px;
+
+}

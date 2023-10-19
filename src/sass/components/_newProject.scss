@@ -1,0 +1,68 @@
+@use '../globals/variables';
+
+.highlight {
+    background-color: rgba(255,255,255,0.1);
+    //border: 2px solid variables.$accent-color2;
+}
+
+.new-project {
+
+    flex: 1;
+
+    &__row {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 12px;
+    }
+
+    &__row:last-child {
+        margin-bottom: 0;
+    }
+
+    &__input {
+        background-color: variables.$dark-text-color;
+        color: variables.$bright-text-color;
+        border: none;
+        width: 100%;
+
+        font-size: 1.6rem;
+        padding: 8px 8px;
+    }
+
+    &__input::placeholder {
+        color: rgba(255,255,255,0.5);
+    }
+
+    &__add,
+    &__cancel {
+        flex: 1;
+        font-size: 1.6rem;
+        padding: 6px 12px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        opacity: 0.8;
+
+        transition: opacity 0.15s;
+    }
+
+    &__add:hover,
+    &__cancel:hover {
+        opacity: 0.9;
+    }
+
+    &__add:active,
+    &__cancel:active {
+        opacity: 1;
+    }
+
+    &__add {
+        background-color: variables.$accent-color;
+        color: variables.$bright-text-color;
+    }
+
+    &__cancel {
+        background-color: variables.$background-color;
+        color: variables.$bright-text-color;
+    }
+}

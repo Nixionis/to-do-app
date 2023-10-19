@@ -1,0 +1,87 @@
+@use '../globals/variables';
+
+.aside {
+    background-color: variables.$aside-color;
+    width: 260px;
+
+    color: variables.$bright-text-color;
+    padding: 20px 20px;
+
+    &__title {
+        margin-top: 40px;
+        font-size: 2.4rem;
+
+        &::after {
+            display: block;
+            content: "";
+            height: 2px;
+            background-color: variables.$bright-text-color;
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__title:first-of-type {
+        margin-top: 0;
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        font-size: 1.8rem;
+        transition: background-color 0.15s;
+        margin-bottom: 10px;
+        border-radius: 6px;
+        padding: 10px 12px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        word-break: break-all;
+
+        transition: height 0.15s,
+        max-height 0.15s;
+    }
+
+    &__item:hover {
+        background-color: rgba(255,255,255,0.1);
+    }
+
+    &__item:active {
+        background-color: rgba(255,255,255,0.2);
+    }
+
+    &__item.active {
+        background-color: variables.$accent-color2;
+    }
+
+    &__item-actions {
+        display: flex;
+        align-items: center;
+        
+        flex: 1;
+        justify-content: end;
+    }
+
+    &__item-action {
+        display: flex;
+        align-items: center;
+        border-radius: 50%;
+        padding: 2px;
+
+        background-color: rgba(255,255,255,0);
+        transition: background-color 0.15s;
+    }
+
+    &__item-action:hover {
+        background-color: rgba(255,255,255,0.15);
+    }
+
+    &__item-action:active {
+        background-color: rgba(255,255,255,0.25);
+    }
+
+}
