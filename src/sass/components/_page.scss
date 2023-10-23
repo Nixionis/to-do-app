@@ -18,8 +18,11 @@ body {
 }
 
 .hide-height {
-    display: none !important;
-    height: 0 !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0 !important;
     max-height: 0 !important;
     pointer-events: none !important;
+    transition: max-height 0.1s !important;
 }

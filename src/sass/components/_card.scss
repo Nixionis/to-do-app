@@ -12,6 +12,7 @@
     gap: 12px;
     align-items: center;
     padding: 10px;
+    overflow: hidden;
 
     &__checkbox {
         grid-row: 1 / 2;
@@ -45,6 +46,8 @@
         grid-column: 3 / 5;
 
         font-size: 1.4rem;
+        max-height: 1000px;
+        transition: max-height 0.75s ease-in;
     }
 
     &__checkbox,
@@ -77,6 +80,34 @@
     &__actions {
         display: flex;
         gap: 12px;
+    }
+
+    &__add-text {
+        font-size: 1.6rem;
+    }
+}
+
+.add-task {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: variables.$background-color;
+    border: 3px dashed rgba(255,255,255,0.25);
+    opacity: 0.25;
+
+    transition: all 0.15s ease-in;
+    cursor: pointer;
+
+    &:hover {
+        border-color: rgba(255,255,255,0.35);
+        transform: scale(1.025,1.075);
+        opacity: 1;
+    }
+
+    &:active {
+        border-color: rgba(255,255,255,0.5);
+        transform: scale(1, 1);
     }
 }
 

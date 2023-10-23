@@ -42,8 +42,11 @@
         gap: 10px;
         word-break: break-all;
 
-        transition: height 0.15s,
-        max-height 0.15s;
+        transition: max-height 2s,
+        opacity 0.75s;
+
+        max-height: 500px;
+        overflow: hidden;
     }
 
     &__item:hover {

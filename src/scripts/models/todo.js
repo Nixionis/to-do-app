@@ -4,7 +4,7 @@ function createToDo(newTitle, newDescription, newDueDate, newPriority, newComple
     let description = newDescription;
     let dueDate = newDueDate;
     let priority = newPriority;
-    let completed = completed;
+    let completed = newCompleted;
 
     return {
         get title() {

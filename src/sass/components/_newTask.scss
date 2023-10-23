@@ -1,24 +1,37 @@
 @use '../globals/variables';
 
 .new-card {
+
+    overflow: hidden;
+    grid-template-columns: 1fr 1fr;
+    max-height: 600px;
+
+    transition: opacity 0.75s ease-in-out,
+        max-height 1s ease-in-out;
+
     &__title-input {
         grid-row: 1 / 2;
-        grid-column: 2 / -2;
+        grid-column: 1 / -1;
+    }
+
+    &__priority {
+        grid-row: 2/3;
+        grid-column: 1 / 2;
     }
 
     &__date-input {
         grid-row: 2 / 3;
-        grid-column: 2 / -2;
+        grid-column: 2 / -1;
     }
 
     &__desc-input {
         grid-row: 3 / 4;
-        grid-column:  2 / -2;
+        grid-column:  1 / -1;
     }
 
     &__actions {
         grid-row: 4 / 5;
-        grid-column:  2 / -2;
+        grid-column:  1 / -1;
 
         display: flex;
         justify-content: center;
@@ -28,7 +41,8 @@
 
     &__title-input,
     &__date-input,
-    &__desc-input {
+    &__desc-input,
+    &__priority {
         background-color: variables.$background-color;
         color: variables.$bright-text-color;
 
@@ -50,7 +64,8 @@
     }
 
     &__add,
-    &__cancel {
+    &__cancel,
+    &__edit {
         width: 100px;
         font-size: 1.6rem;
         padding: 6px 12px;
@@ -63,16 +78,19 @@
     }
 
     &__add:hover,
-    &__cancel:hover {
+    &__cancel:hover,
+    &__edit:hover {
         opacity: 0.9;
     }
 
     &__add:active,
-    &__cancel:active {
+    &__cancel:active,
+    &__edit:hover {
         opacity: 1;
     }
 
-    &__add {
+    &__add,
+    &__edit {
         background-color: variables.$accent-color;
         color: variables.$bright-text-color;
     }

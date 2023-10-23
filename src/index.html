@@ -14,211 +14,97 @@
   <body>
     <header class="header">
       <div class="header__row">
-        <div class="header__menu-button">
+        <div class="header__menu-button js-menu-btn">
           <span class="material-icons-round header__menu-icon">menu</span>
         </div>
         <p class="header__logo">ToDo App</p>
       </div>
     </header>
     <div class="content">
-      <aside class="aside hidden">
+      <aside class="aside hide-display">
         <h2 class="aside__title">Common</h2>
         <ul class="aside__list">
-          <li class="aside__item active">
+          <li class="aside__item active js-all-tasks">
             <span class="material-icons-round"> all_inbox </span>
             All Tasks
           </li>
-          <li class="aside__item">
+          <li class="aside__item js-today-tasks">
             <span class="material-icons-round"> today </span>
             Today
           </li>
-          <li class="aside__item">
+          <li class="aside__item js-week-tasks">
             <span class="material-icons-round"> date_range </span>
             Next 7 Days
           </li>
-          <li class="aside__item">
+          <li class="aside__item js-completed-tasks">
             <span class="material-icons-round"> done_all </span>
             Completed
           </li>
         </ul>
         <h2 class="aside__title">Projects</h2>
-        <ul class="aside__list">
-          <li class="aside__item">
-            Test project
-            <div class="aside__item-actions">
-              <div class="aside__item-action">
-                <span class="material-icons-round"> edit </span>
-              </div>
-              <div class="aside__item-action">
-                <span class="material-icons-round"> clear </span>
-              </div>
-            </div>
-          </li>
-          <li class="aside__item highlight">
-            <form class="new-project">
-              <div class="new-project__row">
-                <input
-                  class="new-project__input"
-                  type="text"
-                  minlength="1"
-                  placeholder="Enter Project Name"
-                />
-              </div>
-              <div class="new-project__row">
-                <button class="new-project__add" type="submit">Change</button>
-                <button class="new-project__cancel" type="button">
-                  Cancel
-                </button>
-              </div>
-            </form>
-          </li>
-          <li class="aside__item highlight hide-height">
-            <form class="new-project">
-              <div class="new-project__row">
-                <input
-                  class="new-project__input"
-                  type="text"
-                  minlength="1"
-                  placeholder="Enter Project Name"
-                />
-              </div>
-              <div class="new-project__row">
-                <button class="new-project__add" type="submit">Add</button>
-                <button class="new-project__cancel" type="button">
-                  Cancel
-                </button>
-              </div>
-            </form>
-          </li>
-          <li class="aside__item">
+        <ul class="aside__list project-list">
+          <li class="aside__item highlight hide-height js-newProject-form"></li>
+          <li class="aside__item js-add-project">
             <span class="material-icons-round"> add_circle_outline </span>
             New project
           </li>
+          <li
+            class="aside__item highlight hide-height js-editProject-form"
+          ></li>
         </ul>
       </aside>
       <main class="cards">
-        <div class="card high">
-          <div class="card__checkbox">
-            <span class="material-icons-round"> radio_button_unchecked </span>
-            <span class="material-icons-round hide-display"> task_alt </span>
-          </div>
-          <div class="card__expand">
-            <span class="material-icons-round"> expand_more </span>
-            <span class="material-icons-round hide-display"> expand_less </span>
-          </div>
-          <h3 class="card__title">Card 1</h3>
-          <p class="card__due-date">10/18/2023</p>
-          <div class="card__actions">
-            <div class="card__action">
-              <span class="material-icons-round"> edit </span>
-            </div>
-            <div class="card__action">
-              <span class="material-icons-round"> clear </span>
-            </div>
-          </div>
-          <p class="card__desc hide-height">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
-            suscipit. At, optio maiores cum dignissimos quibusdam aut distinctio
-            laudantium, voluptatum iusto minima perspiciatis animi similique
-            illo ducimus unde nam eos?
-          </p>
-        </div>
-
-        <form class="new-card card">
+        <form class="new-card card hide-height js-edit-todo">
           <input
             class="new-card__title-input"
             type="text"
             minlength="1"
             placeholder="Enter task name"
           />
+          <select class="new-card__priority">
+            <option value="0">Low</option>
+            <option value="1">Medium</option>
+            <option value="2">High</option>
+          </select>
           <input class="new-card__date-input" type="date" />
           <textarea
             class="new-card__desc-input"
             placeholder="Task description..."
           ></textarea>
           <div class="new-card__actions">
-            <button class="new-card__add">Add</button>
-            <button class="new-card__cancel">Cancel</button>
+            <button class="new-card__edit" type="submit">Edit</button>
+            <button class="new-card__cancel" type="button">Cancel</button>
           </div>
         </form>
 
-        <div class="card high completed">
-          <div class="card__checkbox">
-            <span class="material-icons-round"> radio_button_unchecked </span>
-            <span class="material-icons-round hide-display"> task_alt </span>
+        <form class="new-card card hide-height js-add-todo">
+          <input
+            class="new-card__title-input"
+            type="text"
+            minlength="1"
+            placeholder="Enter task name"
+          />
+          <select class="new-card__priority">
+            <option value="0">Low</option>
+            <option value="1">Medium</option>
+            <option value="2">High</option>
+          </select>
+          <input class="new-card__date-input" type="date" />
+          <textarea
+            class="new-card__desc-input"
+            placeholder="Task description..."
+          ></textarea>
+          <div class="new-card__actions">
+            <button class="new-card__add" type="submit">Add</button>
+            <button class="new-card__cancel" type="button">Cancel</button>
           </div>
-          <div class="card__expand">
-            <span class="material-icons-round"> expand_more </span>
-            <span class="material-icons-round hide-display"> expand_less </span>
-          </div>
-          <h3 class="card__title">Card 1</h3>
-          <p class="card__due-date">10/18/2023</p>
-          <div class="card__actions">
-            <div class="card__action">
-              <span class="material-icons-round"> edit </span>
-            </div>
-            <div class="card__action">
-              <span class="material-icons-round"> clear </span>
-            </div>
-          </div>
-          <p class="card__desc hide-height">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
-            suscipit. At, optio maiores cum dignissimos quibusdam aut distinctio
-            laudantium, voluptatum iusto minima perspiciatis animi similique
-            illo ducimus unde nam eos?
-          </p>
-        </div>
-        <div class="card medium">
-          <div class="card__checkbox">
-            <span class="material-icons-round"> radio_button_unchecked </span>
-            <span class="material-icons-round hide-display"> task_alt </span>
-          </div>
-          <div class="card__expand">
-            <span class="material-icons-round"> expand_more </span>
-            <span class="material-icons-round hide-display"> expand_less </span>
-          </div>
-          <h3 class="card__title">Card 1</h3>
-          <p class="card__due-date">10/18/2023</p>
-          <div class="card__actions">
-            <div class="card__action">
-              <span class="material-icons-round"> edit </span>
-            </div>
-            <div class="card__action">
-              <span class="material-icons-round"> clear </span>
-            </div>
-          </div>
-          <p class="card__desc hide-height">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
-            suscipit. At, optio maiores cum dignissimos quibusdam aut distinctio
-            laudantium, voluptatum iusto minima perspiciatis animi similique
-            illo ducimus unde nam eos?
-          </p>
-        </div>
-        <div class="card low">
-          <div class="card__checkbox">
-            <span class="material-icons-round"> radio_button_unchecked </span>
-            <span class="material-icons-round hide-display"> task_alt </span>
-          </div>
-          <div class="card__expand">
-            <span class="material-icons-round"> expand_more </span>
-            <span class="material-icons-round hide-display"> expand_less </span>
-          </div>
-          <h3 class="card__title">Card 1</h3>
-          <p class="card__due-date">10/18/2023</p>
-          <div class="card__actions">
-            <div class="card__action">
-              <span class="material-icons-round"> edit </span>
-            </div>
-            <div class="card__action">
-              <span class="material-icons-round"> clear </span>
-            </div>
-          </div>
-          <p class="card__desc hide-height">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
-            suscipit. At, optio maiores cum dignissimos quibusdam aut distinctio
-            laudantium, voluptatum iusto minima perspiciatis animi similique
-            illo ducimus unde nam eos?
-          </p>
+        </form>
+
+        <div class="card add-task hide-height">
+          <span class="card__add-icon material-icons-round">
+            add_circle_outline
+          </span>
+          <p class="card__add-text">New Task</p>
         </div>
       </main>
     </div>
