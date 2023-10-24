@@ -638,7 +638,11 @@ function domController(doc,
         }
     });
 
-    return { drawProjects };
+    const clickAllTasks = function () {
+        allTasksButton.click();
+    }
+
+    return { drawProjects, clickAllTasks };
 };
 
 export default domController;

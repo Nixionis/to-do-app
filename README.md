@@ -6,6 +6,8 @@ Allows creating multiple projects with set of tasks.
 
 Tasks can be viewed individually by project, all tasks, today tasks, next 7 days tasks and completed tasks.
 
+All data are stored in a local storage.
+
 ### Built With
 
 - ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
