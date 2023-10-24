@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+      rel="stylesheet"
+    />
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__row">
+        <div class="header__menu-button js-menu-btn">
+          <span class="material-icons-round header__menu-icon">menu</span>
+        </div>
+        <p class="header__logo">ToDo App</p>
+      </div>
+    </header>
+    <div class="content">
+      <aside class="aside hide-display">
+        <h2 class="aside__title">Common</h2>
+        <ul class="aside__list">
+          <li class="aside__item active js-all-tasks">
+            <span class="material-icons-round"> all_inbox </span>
+            All Tasks
+          </li>
+          <li class="aside__item js-today-tasks">
+            <span class="material-icons-round"> today </span>
+            Today
+          </li>
+          <li class="aside__item js-week-tasks">
+            <span class="material-icons-round"> date_range </span>
+            Next 7 Days
+          </li>
+          <li class="aside__item js-completed-tasks">
+            <span class="material-icons-round"> done_all </span>
+            Completed
+          </li>
+        </ul>
+        <h2 class="aside__title">Projects</h2>
+        <ul class="aside__list project-list">
+          <li class="aside__item highlight hide-height js-newProject-form"></li>
+          <li class="aside__item js-add-project">
+            <span class="material-icons-round"> add_circle_outline </span>
+            New project
+          </li>
+          <li
+            class="aside__item highlight hide-height js-editProject-form"
+          ></li>
+        </ul>
+      </aside>
+      <main class="cards">
+        <form class="new-card card hide-height js-edit-todo">
+          <input
+            class="new-card__title-input"
+            type="text"
+            minlength="1"
+            placeholder="Enter task name"
+          />
+          <select class="new-card__priority">
+            <option value="0">Low</option>
+            <option value="1">Medium</option>
+            <option value="2">High</option>
+          </select>
+          <input class="new-card__date-input" type="date" />
+          <textarea
+            class="new-card__desc-input"
+            placeholder="Task description..."
+          ></textarea>
+          <div class="new-card__actions">
+            <button class="new-card__edit" type="submit">Edit</button>
+            <button class="new-card__cancel" type="button">Cancel</button>
+          </div>
+        </form>
+
+        <form class="new-card card hide-height js-add-todo">
+          <input
+            class="new-card__title-input"
+            type="text"
+            minlength="1"
+            placeholder="Enter task name"
+          />
+          <select class="new-card__priority">
+            <option value="0">Low</option>
+            <option value="1">Medium</option>
+            <option value="2">High</option>
+          </select>
+          <input class="new-card__date-input" type="date" />
+          <textarea
+            class="new-card__desc-input"
+            placeholder="Task description..."
+          ></textarea>
+          <div class="new-card__actions">
+            <button class="new-card__add" type="submit">Add</button>
+            <button class="new-card__cancel" type="button">Cancel</button>
+          </div>
+        </form>
+
+        <div class="card add-task hide-height">
+          <span class="card__add-icon material-icons-round">
+            add_circle_outline
+          </span>
+          <p class="card__add-text">New Task</p>
+        </div>
+      </main>
+    </div>
+  </body>
+  <footer class="footer">
+    <p>Developed by Nixion</p>
+  </footer>
+</html>
